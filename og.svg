@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="ogTitle ogDesc" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+ <title id="ogTitle">Steve Jobs Videos</title>
+ <desc id="ogDesc">Compressed Steve Jobs videos. Part of bu.breck.lol.</desc>
+
+ <defs>
+  <radialGradient id="glowGold" cx="12%" cy="-12%" r="70%">
+   <stop offset="0" stop-color="#f0c987" stop-opacity="0.18"/>
+   <stop offset="0.6" stop-color="#f0c987" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowViolet" cx="100%" cy="0%" r="72%">
+   <stop offset="0" stop-color="#b388ff" stop-opacity="0.14"/>
+   <stop offset="0.58" stop-color="#b388ff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="stageGlow" cx="50%" cy="50%" r="50%">
+   <stop offset="0" stop-color="#f0c987" stop-opacity="0.20"/>
+   <stop offset="0.55" stop-color="#b388ff" stop-opacity="0.08"/>
+   <stop offset="1" stop-color="#b388ff" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="titleFill" x1="0" y1="0" x2="1" y2="0.9">
+   <stop offset="0.05" stop-color="#ffffff"/>
+   <stop offset="0.52" stop-color="#f0c987"/>
+   <stop offset="0.95" stop-color="#c9b3ff"/>
+  </linearGradient>
+  <filter id="cardShadow" x="-40%" y="-40%" width="180%" height="210%">
+   <feDropShadow dx="0" dy="30" stdDeviation="34" flood-color="#000000" flood-opacity="0.62"/>
+  </filter>
+ </defs>
+
+ <rect width="1200" height="630" fill="#0a0d12"/>
+ <rect width="1200" height="630" fill="url(#glowGold)"/>
+ <rect width="1200" height="630" fill="url(#glowViolet)"/>
+
+ <text x="76" y="97" font-size="19" font-weight="700" letter-spacing="4.6" fill="#e8eef6">BU</text>
+ <line x1="122" y1="76" x2="122" y2="104" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+ <text x="144" y="97" font-size="19" font-weight="700" letter-spacing="4.6" fill="#f0c987">STEVE JOBS VIDEOS</text>
+
+ <text x="72" y="320" font-size="92" font-weight="700" letter-spacing="-3.5" fill="url(#titleFill)">Steve Jobs</text>
+ <text x="78" y="382" font-size="27" fill="#8b98a9">Compressed keynotes, talks, and appearances.</text>
+
+ <g>
+  <rect x="76" y="492" width="268" height="52" rx="26" fill="rgba(255,255,255,0.045)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+  <circle cx="104" cy="518" r="4.5" fill="#f0c987"/>
+  <text x="126" y="526" font-size="19" letter-spacing="0.4" fill="#f0c987">busteve.breck.lol</text>
+ </g>
+
+ <ellipse cx="888" cy="316" rx="380" ry="280" fill="url(#stageGlow)"/>
+
+ <g transform="rotate(-3 888 316)" filter="url(#cardShadow)">
+  <rect x="632" y="172" width="512" height="288" rx="18" fill="#121924" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+  <g transform="translate(888 316)">
+   <circle r="48" fill="rgba(10,13,18,0.52)" stroke="rgba(255,255,255,0.34)" stroke-width="1.5"/>
+   <path d="M-12 -19 L23 0 L-12 19 Z" fill="#ffffff"/>
+  </g>
+ </g>
+</svg>

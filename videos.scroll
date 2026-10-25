@@ -1,0 +1,180 @@
+// BU Steve — ScrollSet
+//
+// This is the single source of truth for the video gallery.
+// One concept per video, one measure per field, and readme.scroll
+// reads the compiled videos.json to build the cards.
+//
+// To add a video:
+//  1. drop the .mp4 in this repo
+//  2. add a concept below:
+//       id myVideo
+//       title My Video
+//       src myVideo.mp4
+//       poster posters/myVideo.jpg
+//       published 2005-06-12
+//       publishedLabel Jun 12, 2005
+//       duration 15:04
+//     vertical videos also get:
+//       orientation portrait
+//  3. run `scroll build`
+//
+// `scroll build` also renders poster thumbnails via buildThumbs.scroll:
+// only videos whose poster is missing or older than the .mp4 are rendered,
+// and any .mp4 missing from this file is reported during the build.
+
+buildConcepts videos.json
+
+// Schema
+
+idParser
+ extends abstractIdParser
+
+titleParser
+ extends abstractStringMeasureParser
+ description The card title.
+
+srcParser
+ extends abstractStringMeasureParser
+ description The .mp4 file to play and download.
+
+posterParser
+ extends abstractStringMeasureParser
+ description The preview image shown on the card.
+
+publishedParser
+ extends abstractStringMeasureParser
+ description Sort key: YYYY-MM-DD, or YYYY-MM-DDThh:mm for same-day videos.
+
+publishedLabelParser
+ extends abstractStringMeasureParser
+ description Human readable form of published, shown on the card.
+
+durationParser
+ extends abstractStringMeasureParser
+ description How long the video runs, like 0:30.
+
+orientationParser
+ extends abstractStringMeasureParser
+ description Optional. Set to portrait for vertical videos; omit for landscape (16:9).
+
+// Data (oldest first; the page sorts newest first at runtime)
+
+id salesMeeting1983
+title 1984 Ad at Apple Sales Meeting
+src salesMeeting1983.mp4
+poster posters/salesMeeting1983.jpg
+published 1983-10-22
+publishedLabel Oct 22, 1983
+duration 6:41
+
+id macintosh1984
+title Macintosh Introduction
+src macintosh1984.mp4
+poster posters/macintosh1984.jpg
+published 1984-01-24
+publishedLabel Jan 24, 1984
+duration 4:33
+
+id firstMac1984
+title Introduces the First Macintosh
+src firstMac1984.mp4
+poster posters/firstMac1984.jpg
+published 1984-01-24T12:00
+publishedLabel Jan 24, 1984
+duration 4:48
+
+id platformsTalk
+title On the Platforms
+src platformsTalk.mp4
+poster posters/platformsTalk.jpg
+published 1997-01-01
+publishedLabel 1997
+duration 1:25
+
+id crazyOnes
+title Here's to the Crazy Ones
+src crazyOnes.mp4
+poster posters/crazyOnes.jpg
+published 1997-09-28
+publishedLabel Sep 28, 1997
+duration 1:01
+
+id imac1998
+title iMac Introduction
+src imac1998.mp4
+poster posters/imac1998.jpg
+published 1998-05-06
+publishedLabel May 6, 1998
+duration 27:09
+
+id macworld1999
+title Macworld New York Keynote
+src macworld1999.mp4
+poster posters/macworld1999.jpg
+published 1999-07-21
+publishedLabel Jul 21, 1999
+duration 1:22:07
+
+id macworld2001
+title Macworld 2001 — iPod Introduction
+src macworld2001.mp4
+poster posters/macworld2001.jpg
+published 2001-01-09
+publishedLabel Jan 9, 2001
+duration 1:49:44
+
+id macworld2003
+title Macworld 2003 Full Keynote
+src macworld2003.mp4
+poster posters/macworld2003.jpg
+published 2003-01-07
+publishedLabel Jan 7, 2003
+duration 2:01:42
+
+id itunesWindows2003
+title iTunes for Windows Introduction
+src itunesWindows2003.mp4
+poster posters/itunesWindows2003.jpg
+published 2003-10-16
+publishedLabel Oct 16, 2003
+duration 1:18:49
+
+id stanford2005
+title Stanford Commencement Address
+src stanford2005.mp4
+poster posters/stanford2005.jpg
+published 2005-06-12
+publishedLabel Jun 12, 2005
+duration 8:28
+
+id october2005
+title Apple Special Event October 2005
+src october2005.mp4
+poster posters/october2005.jpg
+published 2005-10-12
+publishedLabel Oct 12, 2005
+duration 1:21:53
+
+id wwdc2006
+title WWDC 2006 Keynote
+src wwdc2006.mp4
+poster posters/wwdc2006.jpg
+published 2006-08-07
+publishedLabel Aug 7, 2006
+duration 1:24:59
+
+id iphone2007
+title iPhone Introduction
+src iphone2007.mp4
+poster posters/iphone2007.jpg
+published 2007-01-09
+publishedLabel Jan 9, 2007
+duration 1:19:10
+
+id october2008
+title Apple Special Event October 2008
+src october2008.mp4
+poster posters/october2008.jpg
+published 2008-10-14
+publishedLabel Oct 14, 2008
+duration 52:37
